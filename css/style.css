@@ -27,3 +27,68 @@ main {
 
 /** Add your own CSS here! **/
 
+#animation:hover {
+    border-radius: 50px;
+    transition: border-radius .5s;
+}
+
+#explode:hover {
+    transform: scale(10);
+    opacity: 0;
+    transition: transform 2s, opacity 3s;
+}
+
+@keyframes rainbow {
+    0% {
+        background-color: red;
+    }
+    20% {
+        background-color: orange;
+        
+    }
+    40% {
+        background-color: yellow;
+    }
+    60% {
+        background-color: green;
+    }
+    80% {
+        background-color: blue;
+    }
+    100% {
+        background-color: indigo;
+    }
+}
+
+#background {
+    animation: rainbow 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(2);
+        background-color: indigo;
+    }
+    25% {
+        transform: scale(4);
+        background-color: green;
+    }
+    50% {
+        transform: scale(6);
+        background-color: indigo;
+    }
+    75% {
+        transform: scale(8);
+        background-color: green;
+    }
+    100% {
+        transform: scale(10);
+        background-color: indigo;
+    }
+}
+
+#zoom:hover {
+    animation: zoom 10s;
+}
